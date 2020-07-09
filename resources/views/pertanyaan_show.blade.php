@@ -12,7 +12,7 @@
             <div class="card-body col-md-9 float-left">
                 <p class="card-text"><small>Asked by {{ $question->user->name }} </small><span class="badge badge-light">{{ $question->user->reputasi($question->user->id) }}</span></p>
                 <h3 class="font-weight-bold d-inline">{{ $question->judul }}</h3>
-                <p class="card-text mt-4">{!! $question->isi !!}</p>
+                <h1 class="card-text mt-4">{!! $question->isi !!}</h1>
                 
                 <div class="d-block mb-2">
                 @foreach($tags as $tag)
@@ -82,7 +82,7 @@
 
 <div class="container col-md-11 py-4">
 
-    <h5 class="font-weight-bold">Semua Jawaban</h5>
+    <h5 class="font-weight-bold putih">Semua Jawaban</h5>
     @if($answers->count() > 0)
     @foreach($answers as $answer)
         <div class="card">
@@ -142,7 +142,7 @@
 </div>
 
 <div class="container col-md-11 py-4">
-    <h5 class="font-weight-bold">Tambah Jawaban</h5>
+    <h5 class="font-weight-bold putih">Tambah Jawaban</h5>
         <form action="/pertanyaan/{{ $question->id }}" method="post">
         @csrf
             <div class="form-group">

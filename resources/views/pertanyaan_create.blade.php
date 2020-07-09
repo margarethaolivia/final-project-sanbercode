@@ -6,19 +6,19 @@
 
 @section('content')
 <div class="container col-md-11 pt-4">
-    <h1 class="font-weight-bold pb-4">Tambah Pertanyaan</h1>
+    <h1 class="font-weight-bold pb-4 text-center">Tambah Pertanyaan</h1>
     <form action="/pertanyaan" method="post">
     @csrf
         <div class="form-group">
-            <label for="judul">Judul</label>
+            <label for="judul" class="putih">Judul</label>
             <input type="text" class="form-control" id="judul" name="judul" required autofocus>
         </div>
         <div class="form-group">
-            <label for="isi">Isi</label>
+            <label for="isi" class="putih">Isi</label>
             <textarea name="isi" class="form-control my-editor">{!! old('isi', $isi ?? '') !!}</textarea>
         </div>
         <div class="form-group">
-            <label for="tags">Tag - pisahkan dengan koma (,)</label>
+            <label for="tags" class="putih">Tag - pisahkan dengan koma (,)</label>
             <input type="text" class="form-control" id="tags" name="tags" required>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>

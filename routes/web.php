@@ -21,14 +21,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// route::get('/pertanyaan', 'PertanyaanController@index');
-// route::get('/pertanyaan/create', 'PertanyaanController@create');
-// route::post('/pertanyaan', 'PertanyaanController@store');
-// route::delete('/pertanyaan/{id}', 'PertanyaanController@destroy');
-// route::get('/pertanyaan/{id}', 'PertanyaanController@show');
-// route::get('/pertanyaan/{id}/edit', 'PertanyaanController@edit');
-// route::put('/pertanyaan/{id}', 'PertanyaanController@update');
 
+//controller pertanyaan 
 Route::resource('pertanyaan', 'PertanyaanController');
 
 route::post('/pertanyaan/{pertanyaan_id}', 'JawabanController@store');
@@ -39,6 +33,7 @@ Route::get('/pertanyaan/unupvote/{id}', 'PertanyaanController@unupvote');
 Route::get('/pertanyaan/downvote/{id}', 'PertanyaanController@downvote');
 Route::get('/pertanyaan/undownvote/{id}', 'PertanyaanController@undownvote');
 
+//controller jawaban 
 Route::get('/jawaban/selected/{answer_id}/{user_question}/{user_answer}', 'JawabanController@selected');
 Route::get('/jawaban/unselected/{answer_id}/{user_question}/{user_answer}', 'JawabanController@unselected');
 

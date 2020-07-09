@@ -5,7 +5,7 @@
 
     <div class="row">
         <div class="col">
-            <h3 class="font-weight-bold pb-2 d-inline float-left">Daftar Pertanyaan</h3>
+            <h3 class="font-weight-bold pb-2 d-inline float-left text-center">Daftar Pertanyaan</h3>
             <a href="/pertanyaan/create" class="btn btn-info mb-3 float-right">Tambah Pertanyaan</a>
         </div>
     </div>
@@ -25,7 +25,7 @@
         @foreach( $questions as $question )
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
-                <td><div class="font-weight-bold">{{ $question->judul }}</div></td>
+                <td id="judul"><div class="font-weight-bold">{{ $question->judul }}</div></td>
                 <td> <div>{!! $question->isi !!}</div>
                 <td><a href="/pertanyaan/{{ $question->id }}" class="btn btn-info text-white mb-2 float-right">Detail</a></td>
             </tr>
